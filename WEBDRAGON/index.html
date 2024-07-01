@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad ExamenP2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+    <div class="container main-container">
+        <div id="pantalla-inicio" class="card custom-card">
+            <div class="card-body text-center">
+                <h1 class="card-title mb-4">Torneo del Poder: Examen Definitivo de Dragon Ball</h1>
+                <div class="logo-container">
+                    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzZrbWNsbXpwejQxejNvNG5iODU4M2tybGJnamZoM3BsbWg2cGxtcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h2GpJK6ljDJJnLDWUA/giphy.webp" alt="Logo Dragon Ball" class="img-fluid mb-4 floating">
+                </div>
+                <p class="card-text mb-4">¡Demuestra tu poder y conocimiento sobre el universo de Dragon Ball!</p>
+                <button id="btn-iniciar" class="btn btn-primary btn-lg pulse">¡Iniciar el Torneo del Poder!</button>
+            </div>
+        </div>
+        <div id="pantalla-reglas" class="card custom-card mt-4" style="display: none;">
+            <div class="card-body">
+                <h2 class="card-title mb-4">Reglas del Torneo del Poder</h2>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item"><i class="fas fa-clock"></i> Tendrás 15 segundos para responder cada pregunta.</li>
+                    <li class="list-group-item"><i class="fas fa-hand-point-right"></i> Una vez seleccionada una respuesta, no podrás cambiarla.</li>
+                    <li class="list-group-item"><i class="fas fa-hourglass-end"></i> Si se acaba el tiempo, la pregunta se marcará como incorrecta.</li>
+                    <li class="list-group-item"><i class="fas fa-question-circle"></i> El examen consta de 10 preguntas aleatorias sobre Dragon Ball.</li>
+                    <li class="list-group-item"><i class="fas fa-power-off"></i> ¡Supera tu límite y alcanza el Ultra Instinto!</li>
+                </ul>
+                <button id="btn-comenzar-examen" class="btn btn-primary btn-lg pulse">¡Que comience el Torneo!</button>
+            </div>
+        </div>
+        <div id="pantalla-examen" class="card custom-card mt-4" style="display: none;">
+            <div class="card-body">
+                <h2 class="card-title mb-4">Pregunta <span id="numero-pregunta"></span></h2>
+                <div id="temporizador" class="mb-3">
+                    <i class="fas fa-stopwatch"></i> <span id="tiempo-restante"></span>
+                </div>
+                <div id="contenedor-pregunta" class="contenedor-pregunta"></div>
+                <button id="btn-siguiente" class="btn btn-primary" style="display: none;">Siguiente Pregunta</button>
+            </div>
+        </div>
+        <div id="pantalla-resultados" class="card custom-card mt-4" style="display: none;">
+            <div class="card-body text-center">
+                <h2 class="card-title mb-4">Resultados del Torneo del Poder</h2>
+                <div class="shenlong-container">
+                </div>
+                <p id="mensaje-puntuacion" class="card-text mb-4"></p>
+                <img id="resultado-imagen" src="" alt="Resultado" style="display: none;">
+                <p id="puntuacion" class="card-text mb-4"></p>
+                <div id="emoji-resultado" class="mb-4"></div>
+                <button id="btn-reintentar" class="btn btn-primary me-2 pulse">¡Nuevo Torneo!</button>
+                <button id="btn-salir" class="btn btn-secondary">Salir</button>
+            </div>
+        </div>
+        <div id="power-meter" class="mt-4">
+            <div class="power-bar"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
